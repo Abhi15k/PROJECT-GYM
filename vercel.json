@@ -1,0 +1,15 @@
+{
+    "builds": [
+      {
+        "src": "fitfusion/wsgi.py",
+        "use": "@vercel/python" ,
+        "config": { "maxLambdaSize": "15mb"}
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "fitfusion/wsgi.py"
+      }
+    ]
+  }
